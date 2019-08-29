@@ -1,0 +1,77 @@
+{
+  "build": {
+    "groups": {
+      "default": {
+        "dest": "default",
+        "moniker_range": "{moniker_name}"
+      }
+    },
+    "content": [{
+        "src": "structured/default",
+        "files": [
+          "**.yml"
+        ],
+        "exclude": [
+          "toc.yml"
+        ],
+        "group": "default",
+        "dest": "api"
+      },
+      {
+        "src": "structured/default",
+        "files": [
+          "toc.md",
+          "toc.yml"
+        ],
+        "exclude": [],
+        "group": "default",
+        "dest": "api/{product_name}"
+      },
+      {
+        "src": ".",
+        "files": [
+          "index.md"
+        ],
+        "exclude": [
+          "README.md"
+        ],
+        "group": "default",
+        "dest": "api/{product_name}"
+      }
+    ],
+    "resource": [{
+      "files": [
+        "**/*.png",
+        "**/*.jpg"
+      ],
+      "exclude": [
+        "**/obj/**",
+        "**/includes/**",
+        "_themes/**",
+        "_themes.pdf/**"
+      ]
+    }],
+    "pairing": [
+      {
+        "contentFolder": "structured",
+        "overwriteFragmentsFolder": "authored"
+      }
+    ], 
+    "externalReference": [],
+    "globalMetadata": {
+      "breadcrumb_path": "/{product_name}/breadcrumb/toc.json",
+      "rest_product": "{product_name}",
+      "titleSuffix": "{product_name} REST API",
+      "extendBreadcrumb": true,
+      "feedback_system": "None"
+    },
+    "fileMetadata": {
+      "searchScope": {
+        "structured/**.yml": ["{product_name}", "REST"]
+      }
+    },
+    "template": [],
+    "dest": "rest-ref-template",
+    "markdownEngineName": "markdig"
+  }
+}

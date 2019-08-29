@@ -1,0 +1,21 @@
+{
+  "target_api_root_dir": "structured",
+  "enable_markdown_fragment": true,
+  "markdown_fragment_folder": "authored",
+  "use_yaml_toc": true,
+  "formalize_url": true,
+  "is_grouped_by_tag": true,
+  "version_list": ["default"],
+  "organizations": [{
+    "index": "index.md",
+    "default_toc_title": "Getting Started",
+    "version": "default",
+    "services": [{
+      "toc_title": "{service_toc_title}",
+      "url_group": "{service_url}",
+      "swagger_files": [{
+        "source": "{local_swagger_src_folder}/{swagger_path}"
+      }]
+    }]
+  }]
+}
