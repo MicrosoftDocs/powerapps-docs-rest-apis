@@ -21,7 +21,6 @@
   ],
   "notification_subscribers": [],
   "branches_to_filter": [],
-  "git_repository_branch_open_to_public_contributors": "master"
   "skip_source_output_uploading": false,
   "need_preview_pull_request": true,
   "report_unchanged_files_with_more_warnings": false,
