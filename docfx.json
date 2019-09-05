@@ -1,61 +1,89 @@
 {
   "build": {
-    "content": [{
-        "src": "structured/default",
+    "content": [
+	{
+        "src": "docs-ref-autogen",
         "files": [
-          "**.yml"
+          "**.yml"，
+		  "**.md"
         ],
         "exclude": [
-          "toc.yml"
+          "toc.md"
         ],
-        "group": "default",
         "dest": "api"
       },
       {
-        "src": "structured/default",
+        "src": "docs-ref-autogen",
         "files": [
-          "toc.md",
-          "toc.yml"
+          "toc.md"
         ],
-        "exclude": [],
-        "group": "default",
-        "dest": "api/{product_name}"
+        "exclude": [
+		],
+        "dest": "api/powerapps"
       },
       {
         "src": ".",
         "files": [
           "index.md"
         ],
-        "exclude": [
-          "README.md"
+		"dest": "api/powerapps"
+      },
+	  {
+        "src":"docs-ref-conceptual",
+        "files": [
+          "**.md"
         ],
-        "group": "default",
-        "dest": "api/{product_name}"
+        "exclude": [
+          "**/toc.md",
+          "mobile-engagement/**.md"
+        ],
+        "dest":"api"
+      },
+      {
+        "files": [
+          "*.md",
+          "toc.yml"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "rest/**"
+        ]
+      },
+      {
+        "files": [
+          "breadcrumb/toc.yml"
+        ]
       }
     ],
-    "resource": [{
+    "resource": [
+	{
+	"src":"docs-ref-conceptual",
       "files": [
-        "**/*.png",
-        "**/*.jpg"
+        "**.png",
+        "**.jpg"
       ],
-      "exclude": [
-        "**/obj/**",
-        "**/includes/**",
-        "_themes/**",
-        "_themes.pdf/**"
-      ]
-    }],
-    "pairing": [
+	  "dest":"api"
+    }
+	],
+    "overwrite": [
       {
-        "contentFolder": "structured",
-        "overwriteFragmentsFolder": "authored"
+        "files": [
+          "docs-ref-overwrite/**.md"
+		  ]
       }
     ], 
     "externalReference": [],
     "globalMetadata": {
+	"enable_rest_try_it": true,
+      "rest_product": "Azure",
+      "_gitContribute": {
+        "apiSpecFolder": "docs-ref-overwrite"
+      },
+      "_mockServerUrl": "https://apiexproxy.azurewebsites.net/svc",
+      "_mockServerAuthorization": "Bearer {token:https://graph.windows.net/}",
       "breadcrumb_path": "~/breadcrumb/toc.yml",
-      "rest_product": "powerappsdocs",
-      "titleSuffix": "powerappsdocs REST API",
+      "rest_product": "powerapps",
+      "titleSuffix": "powerapps REST API",
 	  "author":"v-jutao",
 	  "ms.author":"v-jutao",
 	  "ms.topic":"reference",
@@ -66,7 +94,7 @@
     },
     "fileMetadata": {
       "searchScope": {
-        "structured/**.yml": ["powerappsdocs", "REST"]
+        "structured/**.yml": ["powerapps", "REST"]
       }
     },
     "template": [],
