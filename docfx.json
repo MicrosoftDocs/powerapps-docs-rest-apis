@@ -1,10 +1,5 @@
 {
   "build": {
-    "groups": {
-      "default": {
-        "dest": "default"
-      }
-    },
     "content": [{
         "src": "structured/default",
         "files": [
