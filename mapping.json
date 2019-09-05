@@ -1,20 +1,20 @@
 {
-  "target_api_root_dir": "structured",
-  "enable_markdown_fragment": true,
-  "markdown_fragment_folder": "authored",
-  "use_yaml_toc": true,
-  "formalize_url": true,
-  "is_grouped_by_tag": true,
-  "version_list": ["default"],
-  "organizations": [{
-    "index": "index.md",
-    "default_toc_title": "Getting Started",
-    "version": "default",
+  "target_api_root_dir": "docs-ref-autogen",
+  "is_operation_level": true,
+  "use_yaml_schema": true,
+  "use_service_url_group": true,
+  "organizations": [
+    {
+      "name": "",
+      "index": "index.md",
+      "default_toc_title": "Getting Started with REST",
     "services": [{
-      "toc_title": "{service_toc_title}",
-      "url_group": "{service_url}",
+      "toc_title": "Webapi",
+      "url_group": "webapi",
+	  "service_index": "docs-ref-conceptual/webapi/index.md",
+      "service_toc": "docs-ref-conceptual/webapi/toc.md",
       "swagger_files": [{
-        "source": "{local_swagger_src_folder}/{swagger_path}"
+        "source": "powerapps-docs-pr/powerapps-docs/developer/common-data-service/reference/web-api.json"
       }]
     }]
   }]

@@ -1,77 +1,124 @@
 {
   "build": {
-    "groups": {
-      "default": {
-        "dest": "default",
-        "moniker_range": "{moniker_name}"
-      }
-    },
-    "content": [{
-        "src": "structured/default",
+    "content": [
+      {
+        "src":"docs-ref-autogen",
         "files": [
-          "**.yml"
+          "**.yml",
+          "**.md"
         ],
         "exclude": [
-          "toc.yml"
+          "toc.md"
         ],
-        "group": "default",
-        "dest": "api"
+        "dest":"api"
       },
       {
-        "src": "structured/default",
+        "src":"docs-ref-autogen",
         "files": [
-          "toc.md",
-          "toc.yml"
+          "toc.md"
         ],
-        "exclude": [],
-        "group": "default",
-        "dest": "api/{product_name}"
+        "exclude": [
+        ],
+        "dest":"api/azure"
       },
       {
-        "src": ".",
+        "src":".",
         "files": [
           "index.md"
         ],
-        "exclude": [
-          "README.md"
+        "dest":"api/azure"
+      },
+      {
+        "src":"docs-ref-conceptual",
+        "files": [
+          "**.md"
         ],
-        "group": "default",
-        "dest": "api/{product_name}"
+        "exclude": [
+          "**/toc.md",
+          "mobile-engagement/**.md"
+        ],
+        "dest":"api"
+      },
+      {
+        "files": [
+          "*.md",
+          "toc.yml"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "rest/**"
+        ]
+      },
+      {
+        "files": [
+          "breadcrumb/toc.yml"
+        ]
       }
     ],
-    "resource": [{
-      "files": [
-        "**/*.png",
-        "**/*.jpg"
-      ],
-      "exclude": [
-        "**/obj/**",
-        "**/includes/**",
-        "_themes/**",
-        "_themes.pdf/**"
-      ]
-    }],
-    "pairing": [
+    "resource": [
       {
-        "contentFolder": "structured",
-        "overwriteFragmentsFolder": "authored"
+        "src":"docs-ref-conceptual",
+        "files": [
+          "**.png",
+          "**.jpg"
+        ],
+        "dest":"api"
       }
-    ], 
+    ],
+    "overwrite": [
+      {
+        "files": [
+          "docs-ref-overwrite/**.md"
+        ]
+      }
+    ],
     "externalReference": [],
     "globalMetadata": {
-      "breadcrumb_path": "/{product_name}/breadcrumb/toc.json",
-      "rest_product": "{product_name}",
-      "titleSuffix": "{product_name} REST API",
-      "extendBreadcrumb": true,
-      "feedback_system": "None"
+      "enable_rest_try_it": true,
+      "rest_product": "Azure",
+      "_gitContribute": {
+        "apiSpecFolder": "docs-ref-overwrite"
+      },
+      "_mockServerUrl": "https://apiexproxy.azurewebsites.net/svc",
+      "_mockServerAuthorization": "Bearer {token:https://graph.windows.net/}",
+      "breadcrumb_path": "~/breadcrumb/toc.yml",
+      "ms.author": "v-jutao",
+      "manager": "Jiayue Hu",
+      "author": "v-jutao",
+      "ms.topic": "reference",
+      "ms.devlang": "rest-api",
+      "ms.date": "09/05/2019",
+      "brand": "azure",
+      "searchScope": ["Azure"],
+      "_op_documentIdPathDepotMapping": {
+        "docs-ref-conceptual/": {
+          "folder_relative_path_in_docset": "documentation"
+        },
+        "docs-ref-autogen/": {
+          "folder_relative_path_in_docset": "api-ref"
+        },
+        "docs-ref-overwrite/": {
+          "folder_relative_path_in_docset": "api-doc"
+        },
+        "readme-csi/": {
+        },
+        "./": {
+           "folder_relative_path_in_docset": "api-index"
+        },
+        "docs-ref-conceptual/billing/enterprise/": {
+          "folder_relative_path_in_docset": "articles/billing",
+          "depot_name": "Azure.azure-documents"
+        }
+      }
     },
     "fileMetadata": {
       "searchScope": {
         "structured/**.yml": ["{product_name}", "REST"]
       }
     },
-    "template": [],
-    "dest": "rest-ref-template",
-    "markdownEngineName": "markdig"
+    "template": [
+	"docs.html"
+	],
+    "dest": "rest"
   }
 }
