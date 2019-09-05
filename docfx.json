@@ -2,8 +2,7 @@
   "build": {
     "groups": {
       "default": {
-        "dest": "default",
-        "moniker_range": "{moniker_name}"
+        "dest": "default"
       }
     },
     "content": [{
