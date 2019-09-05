@@ -1,124 +1,82 @@
 {
   "build": {
-    "content": [
-      {
-        "src":"docs-ref-autogen",
+    "groups": {
+      "default": {
+        "dest": "default",
+        "moniker_range": "{moniker_name}"
+      }
+    },
+    "content": [{
+        "src": "structured/default",
         "files": [
-          "**.yml",
-          "**.md"
+          "**.yml"
         ],
         "exclude": [
-          "toc.md"
+          "toc.yml"
         ],
-        "dest":"api"
+        "group": "default",
+        "dest": "api"
       },
       {
-        "src":"docs-ref-autogen",
+        "src": "structured/default",
         "files": [
-          "toc.md"
+          "toc.md",
+          "toc.yml"
         ],
-        "exclude": [
-        ],
-        "dest":"api/azure"
+        "exclude": [],
+        "group": "default",
+        "dest": "api/{product_name}"
       },
       {
-        "src":".",
+        "src": ".",
         "files": [
           "index.md"
         ],
-        "dest":"api/azure"
-      },
-      {
-        "src":"docs-ref-conceptual",
-        "files": [
-          "**.md"
-        ],
         "exclude": [
-          "**/toc.md",
-          "mobile-engagement/**.md"
+          "README.md"
         ],
-        "dest":"api"
-      },
-      {
-        "files": [
-          "*.md",
-          "toc.yml"
-        ],
-        "exclude": [
-          "**/obj/**",
-          "rest/**"
-        ]
-      },
-      {
-        "files": [
-          "breadcrumb/toc.yml"
-        ]
+        "group": "default",
+        "dest": "api/{product_name}"
       }
     ],
-    "resource": [
+    "resource": [{
+      "files": [
+        "**/*.png",
+        "**/*.jpg"
+      ],
+      "exclude": [
+        "**/obj/**",
+        "**/includes/**",
+        "_themes/**",
+        "_themes.pdf/**"
+      ]
+    }],
+    "pairing": [
       {
-        "src":"docs-ref-conceptual",
-        "files": [
-          "**.png",
-          "**.jpg"
-        ],
-        "dest":"api"
+        "contentFolder": "structured",
+        "overwriteFragmentsFolder": "authored"
       }
-    ],
-    "overwrite": [
-      {
-        "files": [
-          "docs-ref-overwrite/**.md"
-        ]
-      }
-    ],
+    ], 
     "externalReference": [],
     "globalMetadata": {
-      "enable_rest_try_it": true,
-      "rest_product": "Azure",
-      "_gitContribute": {
-        "apiSpecFolder": "docs-ref-overwrite"
-      },
-      "_mockServerUrl": "https://apiexproxy.azurewebsites.net/svc",
-      "_mockServerAuthorization": "Bearer {token:https://graph.windows.net/}",
       "breadcrumb_path": "~/breadcrumb/toc.yml",
-      "ms.author": "v-jutao",
-      "manager": "Jiayue Hu",
-      "author": "v-jutao",
-      "ms.topic": "reference",
-      "ms.devlang": "rest-api",
-      "ms.date": "09/05/2019",
-      "brand": "azure",
-      "searchScope": ["Azure"],
-      "_op_documentIdPathDepotMapping": {
-        "docs-ref-conceptual/": {
-          "folder_relative_path_in_docset": "documentation"
-        },
-        "docs-ref-autogen/": {
-          "folder_relative_path_in_docset": "api-ref"
-        },
-        "docs-ref-overwrite/": {
-          "folder_relative_path_in_docset": "api-doc"
-        },
-        "readme-csi/": {
-        },
-        "./": {
-           "folder_relative_path_in_docset": "api-index"
-        },
-        "docs-ref-conceptual/billing/enterprise/": {
-          "folder_relative_path_in_docset": "articles/billing",
-          "depot_name": "Azure.azure-documents"
-        }
-      }
+      "rest_product": "powerappsdocs",
+      "titleSuffix": "powerappsdocs REST API",
+	  "author":"v-jutao",
+	  "ms.author":"v-jutao",
+	  "ms.topic":"reference",
+	  "ms.devlang":"rest-apis",
+	  "ms.date":"09/04/2019"
+      "extendBreadcrumb": true,
+      "feedback_system": "None"
     },
     "fileMetadata": {
       "searchScope": {
-        "structured/**.yml": ["{product_name}", "REST"]
+        "structured/**.yml": ["powerappsdocs", "REST"]
       }
     },
-    "template": [
-	"docs.html"
-	],
-    "dest": "rest"
+    "template": [],
+    "dest": "rest-ref-template",
+    "markdownEngineName": "markdig"
   }
 }
