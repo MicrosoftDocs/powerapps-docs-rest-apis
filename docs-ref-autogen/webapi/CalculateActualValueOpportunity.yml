@@ -1,0 +1,8 @@
+### YamlMime:RESTOperationGroup
+uid: localhost.api.data.v9.0.webapi.calculateactualvalueopportunity
+name: Calculate Actual Value Opportunity
+apiVersion: 1.0.1
+service: Webapi
+operations:
+- uid: localhost.api.data.v9.0.webapi.calculateactualvalueopportunity.calculateactualvalueopportunity
+  summary: Invoke action CalculateActualValueOpportunity

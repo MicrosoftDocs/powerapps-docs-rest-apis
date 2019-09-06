@@ -1,0 +1,8 @@
+### YamlMime:RESTOperationGroup
+uid: localhost.api.data.v9.0.webapi.revisequote
+name: Revise Quote
+apiVersion: 1.0.1
+service: Webapi
+operations:
+- uid: localhost.api.data.v9.0.webapi.revisequote.revisequote
+  summary: Invoke actionImport ReviseQuote

@@ -1,0 +1,7 @@
+{
+  "CloseQuote/CloseQuote.yml": "https://github.com/MicrosoftDocs/powerapps-docs-pr/blob/webapi-reference/powerapps-docs/developer/common-data-service/reference/web-api.json#L20",
+  "CalculateActualValueOpportunity/CalculateActualValueOpportunity.yml": "https://github.com/MicrosoftDocs/powerapps-docs-pr/blob/webapi-reference/powerapps-docs/developer/common-data-service/reference/web-api.json#L63",
+  "ReviseQuote/ReviseQuote.yml": "https://github.com/MicrosoftDocs/powerapps-docs-pr/blob/webapi-reference/powerapps-docs/developer/common-data-service/reference/web-api.json#L99",
+  "UnlockInvoicePricing/UnlockInvoicePricing.yml": "https://github.com/MicrosoftDocs/powerapps-docs-pr/blob/webapi-reference/powerapps-docs/developer/common-data-service/reference/web-api.json#L147",
+  "UnlockSalesOrderPricing/UnlockSalesOrderPricing.yml": "https://github.com/MicrosoftDocs/powerapps-docs-pr/blob/webapi-reference/powerapps-docs/developer/common-data-service/reference/web-api.json#L186"
+}

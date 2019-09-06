@@ -1,0 +1,8 @@
+### YamlMime:RESTOperationGroup
+uid: localhost.api.data.v9.0.webapi.unlockinvoicepricing
+name: Unlock Invoice Pricing
+apiVersion: 1.0.1
+service: Webapi
+operations:
+- uid: localhost.api.data.v9.0.webapi.unlockinvoicepricing.unlockinvoicepricing
+  summary: Invoke actionImport UnlockInvoicePricing

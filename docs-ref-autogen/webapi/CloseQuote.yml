@@ -1,0 +1,8 @@
+### YamlMime:RESTOperationGroup
+uid: localhost.api.data.v9.0.webapi.closequote
+name: Close Quote
+apiVersion: 1.0.1
+service: Webapi
+operations:
+- uid: localhost.api.data.v9.0.webapi.closequote.closequote
+  summary: Invoke actionImport CloseQuote

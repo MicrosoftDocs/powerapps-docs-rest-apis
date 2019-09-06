@@ -1,0 +1,70 @@
+### YamlMime:RESTOperation
+uid: localhost.api.data.v9.0.webapi.unlockinvoicepricing.unlockinvoicepricing
+name: Unlock Invoice Pricing
+service: Webapi
+groupName: Unlock Invoice Pricing
+apiVersion: 1.0.1
+summary: Invoke actionImport UnlockInvoicePricing
+consumes:
+- application/json
+paths:
+- content: POST https://localhost/api/data/v9.0/UnlockInvoicePricing
+uriParameters: []
+responses:
+- name: 204 No Content
+  description: Success
+- name: Other Status Codes
+  description: error
+  types:
+  - uid: odata.error
+requestHeader: []
+definitions:
+- name: odata.error
+  kind: object
+  properties:
+  - name: error
+    description: ''
+    types:
+    - uid: odata.error.main
+- name: odata.error.main
+  kind: object
+  properties:
+  - name: code
+    description: ''
+    types:
+    - uid: string
+  - name: message
+    description: ''
+    types:
+    - uid: string
+  - name: target
+    description: ''
+    types:
+    - uid: string
+  - name: details
+    description: ''
+    types:
+    - uid: odata.error.detail
+      isArray: true
+  - name: innererror
+    description: The structure of this object is service-specific
+    types:
+    - uid: object
+- name: odata.error.detail
+  kind: object
+  properties:
+  - name: code
+    description: ''
+    types:
+    - uid: string
+  - name: message
+    description: ''
+    types:
+    - uid: string
+  - name: target
+    description: ''
+    types:
+    - uid: string
+examples: []
+security: []
+errorCodes: []

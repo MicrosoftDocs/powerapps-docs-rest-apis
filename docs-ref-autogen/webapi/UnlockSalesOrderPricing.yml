@@ -1,0 +1,8 @@
+### YamlMime:RESTOperationGroup
+uid: localhost.api.data.v9.0.webapi.unlocksalesorderpricing
+name: Unlock Sales Order Pricing
+apiVersion: 1.0.1
+service: Webapi
+operations:
+- uid: localhost.api.data.v9.0.webapi.unlocksalesorderpricing.unlocksalesorderpricing
+  summary: Invoke actionImport UnlockSalesOrderPricing
