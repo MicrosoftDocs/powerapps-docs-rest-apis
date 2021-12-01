@@ -20,23 +20,26 @@
     }
   ],
   "notification_subscribers": [],
+  "sync_notification_subscribers": null,
   "branches_to_filter": [],
   "skip_source_output_uploading": false,
   "need_preview_pull_request": true,
   "report_unchanged_files_with_more_warnings": false,
+  "contribution_branch_mappings": null,
   "dependent_repositories": [
     {
       "path_to_root": "_themes",
       "url": "https://github.com/Microsoft/templates.docs.msft",
-      "branch": "master",
+      "branch": "main",
       "branch_mapping": {}
     }
   ],
+  "branch_target_mapping": null,
   "need_generate_pdf_url_template": false,
   "log_codes_to_ignore": [
     "DuplicateUids",
     "InvalidInternalBookmark"
-	],
+  ],
   "need_generate_pdf": false,
   "need_generate_intellisense": false,
   "EnableIncrementalBuild": false
