@@ -1,30 +1,9 @@
 {
-  "docsets_to_publish": [
-    {
-      "docset_name": "powerapps-docs-rest-apis",
-      "build_source_folder": "powerapps-docs-rest-apis",
-      "build_output_subfolder": "powerapps-docs-rest-apis",
-      "locale": "en-us",
-      "monikers": [],
-      "moniker_ranges": [],
-      "open_to_public_contributors": true,
-      "type_mapping": {
-        "Conceptual": "Content",
-        "ManagedReference": "Content",
-        "RestApi": "Content"
-      },
-      "build_entry_point": "docs",
-      "template_folder": "_themes",
-      "base_path": "rest",
-      "site_name": "Docs"
-    }
-  ],
+  "docsets_to_publish": [],
   "notification_subscribers": [],
   "sync_notification_subscribers": [],
   "branches_to_filter": [],
-  "skip_source_output_uploading": false,
   "need_preview_pull_request": false,
-  "contribution_branch_mappings": {},
   "dependent_repositories": [
     {
       "path_to_root": "_themes",
@@ -34,5 +13,7 @@
     }
   ],
   "branch_target_mapping": {},
+  "skip_source_output_uploading": false,
+  "contribution_branch_mappings": {},
   "need_generate_pdf_url_template": false
 }
